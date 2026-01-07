@@ -34,13 +34,43 @@ namespace Ejemplo.Controllers
                 tmp.ApellidoPaterno = "Yupanqui";
                 tmp.Celular = "941717321";
                 tmp.Direccion = "Mi casa";
-                tmp.Nombre = "Josue";
                 tmp.NumeroDocumento = "87654321";
                 tmp.Sexo = "Masculino";
                 resultado.Add(tmp);
             }
 
             return Ok(resultado);
+        }
+        private List<PersonaModel> TraerDatosPersona()
+        {
+            List<PersonaModel> resultado = new List<PersonaModel>();
+
+            //aqui vamos a simular una lista de personas
+
+            resultado.Add(new PersonaModel()
+            {
+                ApellidoMaterno = "Samaniego",
+                ApellidoPaterno = "Yupanqui",
+                Celular = "941717321",
+                Direccion = "Mi casa",
+                Nombre = "Josue",
+                NumeroDocumento = "87654321",
+                Sexo = "Masculino"
+            });
+
+            for (int i = 0; i < 10; i++)
+            {
+                PersonaModel tmp = new PersonaModel();
+                tmp.ApellidoMaterno = "Samaniego";
+                tmp.ApellidoPaterno = "Yupanqui";
+                tmp.Celular = "941717321";
+                tmp.Direccion = "Mi casa";
+                tmp.NumeroDocumento = "87654321";
+                tmp.Sexo = "Masculino";
+                resultado.Add(tmp);
+            }
+
+            return resultado;
         }
     }
 }
